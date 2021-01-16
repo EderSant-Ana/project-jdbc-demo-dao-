@@ -3,6 +3,8 @@ package application;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -23,6 +25,8 @@ public class Program {
 		catch(ParseException e) {
 			System.out.println(e.getMessage());
 		}
+		
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 	}
 
 }
